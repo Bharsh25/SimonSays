@@ -35,4 +35,25 @@ body{
 
 .userflash{
     background-color: green;
+}           
+
+#startBtn {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin: 20px;
+}
+
+#startBtn:hover {
+    background-color: #000000;
+}
+
+#startBtn:active {
+    transform: scale(0.95);
 }

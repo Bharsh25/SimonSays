@@ -9,12 +9,23 @@ let highestScore=0;
 
 document.addEventListener("keypress", function(){
     if(start==false){
-        console.log("game strated");
-        start=true;
-
-        levelUp();
+        startGame();
     }
 });
+
+document.querySelector("#startBtn").addEventListener("click", function(){
+    if(start==false){
+        startGame();
+    }
+});
+
+
+function startGame(){
+    console.log("game started");
+    start = true;
+    levelUp();
+    document.querySelector("#startBtn").style.display = "none"; // hide button when game starts
+}
 
 function btnFlash(btn){
     btn.classList.add("flash");
@@ -88,4 +99,5 @@ function reset(){
     gameSeq=[];
     userSeq=[];
     level=0;
+    document.querySelector("#startBtn").style.display = "inline-block";
 }
